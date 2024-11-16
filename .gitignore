@@ -1,0 +1,5 @@
+venv
+.env
+*.jpg
+*.png
+*.ipynb
