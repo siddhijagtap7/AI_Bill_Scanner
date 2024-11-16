@@ -4,9 +4,9 @@ import pandas as pd
 import json
 from functools import lru_cache
 import toml
+import streamlit as st
 
-secrets = toml.load('secrets.toml')
-GOOGLE_API_KEY = secrets.get("GOOGLE_API_KEY", "")
+GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
 
 genai.configure(api_key=GOOGLE_API_KEY)
 

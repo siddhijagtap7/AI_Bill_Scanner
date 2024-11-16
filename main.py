@@ -6,7 +6,7 @@ from core.dataframe import get_individual_prices
 import pandas as pd
 import pytesseract
 
-pytesseract.pytesseract.tesseract_cmd = "/usr/bin/tesseract"
+# pytesseract.pytesseract.tesseract_cmd = "/usr/bin/tesseract"
 
 st.title("Bill Splitter")
 

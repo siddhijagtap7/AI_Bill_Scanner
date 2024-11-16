@@ -4,3 +4,4 @@ venv
 *.png
 *.ipynb
 secrets.toml
+.streamlit
