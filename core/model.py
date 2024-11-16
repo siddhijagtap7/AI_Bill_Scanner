@@ -3,7 +3,6 @@ import google.generativeai as genai
 import pandas as pd
 import json
 from functools import lru_cache
-import toml
 import streamlit as st
 
 GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
