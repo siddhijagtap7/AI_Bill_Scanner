@@ -2,12 +2,12 @@ import os
 import google.generativeai as genai
 import pandas as pd
 import json
-import dotenv
 from functools import lru_cache
+import toml
 
-dotenv.load_dotenv()
+secrets = toml.load('secrets.toml')
+GOOGLE_API_KEY = secrets.get("GOOGLE_API_KEY", "")
 
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 genai.configure(api_key=GOOGLE_API_KEY)
 
 
@@ -38,10 +38,8 @@ def items_price(text):
     
     # data = json.loads(response.text)
     response = response.text
-    print(response)
     cleaned_string = response.strip("```json\n").strip("```")
     data = json.loads(cleaned_string)
-    print(data)
     df = pd.DataFrame(data)
     df['Prices'] = df['Prices'].astype(float)
     return df
