@@ -5,3 +5,5 @@ venv
 *.ipynb
 secrets.toml
 .streamlit
+.devcontainer
+samples

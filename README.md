@@ -1,0 +1,2 @@
+# AI Bill Splitter
+
